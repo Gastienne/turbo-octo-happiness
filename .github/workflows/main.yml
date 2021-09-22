@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - run: |
-          echo ${{ toJson(github.event.pull_request.requested_reviewers) }}
+          echo ${{ toJson(github.event.pull_request) }}
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Setup node 14
